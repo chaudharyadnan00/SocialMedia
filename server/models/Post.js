@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 const postSchema = mongoose.Schema(
     {
         userId: {
@@ -23,10 +24,12 @@ const postSchema = mongoose.Schema(
         },
         comments: {
             type: Array,
-            default: []
-        }
+            default: [],
+        },
     },
     { timestamps: true }
-)
-const Post=mongoose.model('Post',postSchema);
+);
+
+const Post = mongoose.model("Post", postSchema);
+
 export default Post;
